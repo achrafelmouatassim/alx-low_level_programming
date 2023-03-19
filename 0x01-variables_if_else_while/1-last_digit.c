@@ -9,7 +9,7 @@
  *
  * Return: 0 (seccuss)
 */
-int main(void)
+  int main(void)
 {
 	int n, digit;
 
