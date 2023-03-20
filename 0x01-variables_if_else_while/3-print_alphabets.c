@@ -5,7 +5,7 @@
  *
  * Description: print alphabet in lowrcase then in uppercase
  *
- * Return: alwys 0 (seccess)
+ * Return: Always 0 (seccess)
  */
 
 int main(void)
