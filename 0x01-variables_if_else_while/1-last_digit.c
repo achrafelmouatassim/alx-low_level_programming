@@ -1,15 +1,16 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/***
+/**
  * main - entry point
  *
  * Description: print the value of n status:
- * greater than, is zero and is not less than 6.
+ *		greater than, is zero and is not less than 6.
  *
- * Return: 0 (seccuss)
+ * Return: Always 0 (seccuss)
 */
-  int main(void)
+
+int main(void)
 {
 	int n, digit;
 
