@@ -13,8 +13,8 @@ int main(void)
 	char ch = 'a';
 	char CH = 'A';
 
-	/* print a - Z*/
-	while (ch <= 'Z')
+	/* print a - z*/
+	while (ch <= 'z')
 	{
 		putchar(ch);
 		ch++;
