@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * print_numbers - print 0 - 9
- *		only using _putchar twice
+ * print_numbers - prints the numbers, from 0 to 9, followed by a new line
+ *
  *
  * Return: always 0 (seccess)
  */
 void print_numbers(void)
 
 {
-	int num 0;
+	int num = 0;
 
 	do {
 		_putchar(num + 48);
