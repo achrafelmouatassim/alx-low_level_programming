@@ -2,21 +2,36 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASSWORD_LENGTH 10
+#define GRAPH_MIN 33
+#define GRAPH_MAX 126
 
-int main(void) {
-    char password[PASSWORD_LENGTH + 1];
-    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    srand(time(NULL));
-    
-    for (int i = 0; i < PASSWORD_LENGTH; i++) {
-        password[i] = charset[rand() % (sizeof(charset) - 1)];
-    }
-    
-    password[PASSWORD_LENGTH] = '\0';
-    
-    printf("Generated password: %s\n", password);
-    
-    return 0;
+
+/**
+ * main - generate valid passwords for 101-crackme
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+	int sum = 2772;
+	char c;
+
+	srand(time(NULL));
+
+	while (sum > GRAPH_MAX)
+	{
+		c = rand() % (GRAPH_MAX - GRAPH_MIN) + GRAPH_MIN;
+
+		sum -= c;
+
+		if (sum < GRAPH_MIN)
+		{
+			c -= (GRAPH_MIN - sum);
+			sum = GRAPH_MIN;
+		}
+		putchar(c);
+	}
+	putchar(sum);
+
+	return (0);
 }
-
